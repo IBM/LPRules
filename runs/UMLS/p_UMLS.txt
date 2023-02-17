@@ -1,0 +1,33 @@
+## © Copyright IBM Corporation 2022. All Rights Reserved.
+## LICENSE: Eclipse Public License - v 2.0, https://opensource.org/licenses/EPL-2.0
+## SPDX-License-Identifier: EPL-2.0
+data_directory ../../data/UMLS
+max_rule_length 4
+max_complexity 5
+penalty_on_complexity 0.03
+model_number 2
+relation_id -1
+use_relation_in_rules true
+use_rules_of_length_one true
+use_relation_in_length_one_rule false
+report_stats_right_removal true
+report_stats_left_removal true
+report_stats_all_removal true
+print_scores_to_file false
+write_lp_file false
+## ranking_type = 0 (aggresive), 1 (intermediate), 2 (conservative), 3 (randomBreak) ## 
+ranking_type 1
+use_reverse_arcs_in_rules true
+run_only_for_relations_in_test false
+run_for_reverse_relations false
+run_column_generation false
+## generate_rules = 0 (enumeration), 1 (S0), 2 (heuristic) ## 
+generate_rules 1
+run_find_best_complexity true
+find_best_complexity_ranking_type 3
+alpha_convex_combination_model3 0.5
+penalty_on_negative_pairs 0.0055 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.1
+use_breadth_first_search false
+repeated_nodes_allowed false
+## run_mode = 0 (normal), 1 (read rules + score), 2 (read rules + run LP + score), 3 (read rules + add new rules + run LP + score) ##
+run_mode 0
